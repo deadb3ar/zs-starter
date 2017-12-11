@@ -73,6 +73,8 @@ if ( ! function_exists( 'zs_starter_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
+		
+		//Add theme support for Custom Logo
 		add_theme_support( 'custom-logo', array(
 			'height'      => 250,
 			'width'       => 250,
