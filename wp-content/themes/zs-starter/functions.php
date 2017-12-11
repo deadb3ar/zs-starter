@@ -124,7 +124,7 @@ function zs_starter_scripts() {
 
 	wp_enqueue_script( 'zs-starter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	//enqueue Google Fonts:Source Sans Pro and PT Serif
+	//enqueue Google Fonts: Source Sans Pro and PT Serif
 	wp_enqueue_style('zs-starter-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro:400,400i,700,900" rel="stylesheet');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
