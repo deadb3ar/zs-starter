@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package zs-starter
+ * @package zsstarter
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

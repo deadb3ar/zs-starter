@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package zs-starter
+ * @package zsstarter
  */
 
 ?>
@@ -15,14 +15,14 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zs-starter' ) ); ?>"><?php
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zsstarter' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'zs-starter' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'zsstarter' ), 'WordPress' );
 			?></a>
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'zs-starter' ), 'zs-starter', '<a href="http://underscores.me/">zoe soroka</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'zsstarter' ), 'zsstarter', '<a href="http://underscores.me/">zoe soroka</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

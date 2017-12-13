@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package zs-starter
+ * @package zsstarter
  */
 
 get_header(); ?>

@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package zs-starter
+ * @package zsstarter
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function zs_starter_jetpack_setup() {
+function zsstarter_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'zs_starter_infinite_scroll_render',
+		'render'    => 'zsstarter_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function zs_starter_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => 'zs-starter-style',
+			'stylesheet' => 'zsstarter-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -37,12 +37,12 @@ function zs_starter_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'zs_starter_jetpack_setup' );
+add_action( 'after_setup_theme', 'zsstarter_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function zs_starter_infinite_scroll_render() {
+function zsstarter_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
