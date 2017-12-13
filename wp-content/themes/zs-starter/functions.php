@@ -130,6 +130,8 @@ function zsstarter_scripts() {
 		'collapse' => __( 'Collapse child menu', 'zsstarter'),
 	));
 
+	wp_enqueue_script( 'zsstarter-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20171212', true );	
+
 	wp_enqueue_script( 'zsstarter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	//enqueue Google Fonts: Source Sans Pro and PT Serif

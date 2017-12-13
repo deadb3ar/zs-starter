@@ -1,6 +1,8 @@
 h1, h2, h3, h4, h5, h6 {
+	margin-top: .75em;
+	margin-bottom: .25em;
+	font-family: $font__sans;
 	clear: both;
-	font-family: $font-sans;
 }
 
 h1 {
@@ -20,7 +22,7 @@ h4 {
 }
 
 h5 {
-	font-size: 1.8;
+	font-size: 1.8em;
 }
 
 h6 {
