@@ -120,11 +120,12 @@ add_action( 'widgets_init', 'zsstarter_widgets_init' );
  * Enqueue scripts and styles.
  */
 function zsstarter_scripts() {
-	
+	//enqueue Google Fonts: Source Sans Pro and PT Serif
+	wp_enqueue_style('zsstarter-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro:400,400i,700,900" rel="stylesheet');
+
 	wp_enqueue_style( 'zsstarter-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'zsstarter-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
-
 	wp_localize_script( 'zsstarter-navigation','zsstarterScreenReaderText', array(
 		'expand' => __( 'Expand child menu', 'zsstarter'),
 		'collapse' => __( 'Collapse child menu', 'zsstarter'),
@@ -133,9 +134,6 @@ function zsstarter_scripts() {
 	wp_enqueue_script( 'zsstarter-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20171212', true );	
 
 	wp_enqueue_script( 'zsstarter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	//enqueue Google Fonts: Source Sans Pro and PT Serif
-	wp_enqueue_style('zsstarter-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif|Source+Sans+Pro:400,400i,700,900" rel="stylesheet');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -156,7 +154,12 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+//require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
