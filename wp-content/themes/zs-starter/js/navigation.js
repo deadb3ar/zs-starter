@@ -12,23 +12,19 @@
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( zsstarterScreenReaderText.icon )
+		    .append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )		
 			.append( $( '<span />', { 'class': 'screen-reader-text', text: zsstarterScreenReaderText.expand }) );
 
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
 
 		// Set the active submenu dropdown toggle button initial state.
-		container.find( '.current-menu-ancestor > button' )
-			.addClass( 'toggled-on' )
-			.attr( 'aria-expanded', 'true' )
-			.find( '.screen-reader-text' )
-			.text( zsstarterScreenReaderText.collapse );
-		// Set the active submenu initial state.
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+
 
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 			var _this = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
+				screenReaderSpan = _this.find( '.screen-reader-text' ),
+				dropdownSymbol = _this.find( '.dropdown-symbol' );
+				dropdownSymbol.text( dropdownSymbol.text() === '-' ? '+' : '-');
 
 			e.preventDefault();
 			_this.toggleClass( 'toggled-on' );
@@ -47,6 +43,7 @@
 	siteNavContain = masthead.find( '.main-navigation' );
 	siteNavigation = masthead.find( '.main-navigation > div > ul' );
 
+	//SOMEWHERE HERE----------------Below vvv---------
 	// Enable menuToggle.
 	(function() {
 
